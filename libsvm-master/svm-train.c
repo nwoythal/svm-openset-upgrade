@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 
 	if(error_msg)
 	{
-		fprintf(stderr,"ERROR: %s\n",error_msg);
+		fprintf(stderr,"Error: %s\n",error_msg);
 		exit(1);
 	}
 
@@ -277,8 +277,7 @@ void parse_command_line(int argc, char **argv, char *input_file_name, char *mode
 
 void read_problem(const char *filename)
 {
-	int max_index, inst_max_index, i;
-	size_t elements, j;
+	int elements, max_index, inst_max_index, i, j;
 	FILE *fp = fopen(filename,"r");
 	char *endptr;
 	char *idx, *val, *label;
